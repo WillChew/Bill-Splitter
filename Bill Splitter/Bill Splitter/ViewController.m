@@ -26,7 +26,6 @@
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(screenTapped:)];
     [self.view addGestureRecognizer:tapGesture];
     
-    [self.slider addObserver:self selector:@selector(sliderValueChanged:) name:UIControlEventValueChanged object:nil];
 
 }
 - (void)screenTapped:(UITapGestureRecognizer*)sender {
@@ -42,8 +41,7 @@
     
 }
 - (IBAction)sliderValueChanged:(id)sender {
-    float newValue = self.slider.value;
-    NSLog(@"%.2f", newValue);
+    [self displayText:@""];
 }
 
 
@@ -52,7 +50,7 @@
 }
 
 -(void)displayText:(NSString*)text {
-//    int billAmount = self.textField.text.intValue;
+
     float splitTotal = self.textField.text.floatValue / self.slider.value;
     
     NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc]init];
@@ -61,7 +59,7 @@
     NSString *sliderAsStr = [numberFormatter stringFromNumber:[NSNumber numberWithFloat:splitTotal]];
     
     self.label.text = sliderAsStr;
-//    NSLog(@"%@", decimal);
+
     
 }
 
@@ -79,6 +77,6 @@
     return YES;
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string 
+
 
 @end
