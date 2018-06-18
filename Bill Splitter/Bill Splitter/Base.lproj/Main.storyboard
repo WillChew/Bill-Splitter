@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kep-Tm-LYx">
+                                <rect key="frame" x="20" y="46" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="2" maxValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="ut6-Fx-HpZ">
+                                <rect key="frame" x="18" y="76.5" width="339" height="57.5"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ya7-0z-xfN"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsT-Gt-Oi5">
+                                <rect key="frame" x="164" y="141" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="calculateSplitAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yo9-ee-Tpr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esy-x5-kzQ">
+                                <rect key="frame" x="20" y="170" width="335" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="gUa-Yq-kkM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ut6-Fx-HpZ" firstAttribute="firstBaseline" secondItem="kep-Tm-LYx" secondAttribute="baseline" constant="11" symbolType="layoutAnchor" id="3EV-7S-fGq"/>
+                            <constraint firstItem="ut6-Fx-HpZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Hu-L2-cTp"/>
+                            <constraint firstItem="ut6-Fx-HpZ" firstAttribute="width" secondItem="kep-Tm-LYx" secondAttribute="width" id="CHN-zq-y9P"/>
+                            <constraint firstItem="kep-Tm-LYx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L3V-wE-z3x"/>
+                            <constraint firstItem="kep-Tm-LYx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="M79-yq-DyF"/>
+                            <constraint firstItem="esy-x5-kzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nfu-PH-AbZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kep-Tm-LYx" secondAttribute="trailing" constant="20" id="OcR-yo-eiD"/>
+                            <constraint firstItem="kep-Tm-LYx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UkH-XV-6YO"/>
+                            <constraint firstItem="vsT-Gt-Oi5" firstAttribute="firstBaseline" secondItem="ut6-Fx-HpZ" secondAttribute="baseline" constant="22" symbolType="layoutAnchor" id="bTx-MF-IFP"/>
+                            <constraint firstItem="ut6-Fx-HpZ" firstAttribute="centerX" secondItem="vsT-Gt-Oi5" secondAttribute="centerX" id="ccx-tY-k21"/>
+                            <constraint firstItem="esy-x5-kzQ" firstAttribute="width" secondItem="kep-Tm-LYx" secondAttribute="width" id="cqa-WJ-QdC"/>
+                            <constraint firstItem="esy-x5-kzQ" firstAttribute="firstBaseline" secondItem="vsT-Gt-Oi5" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="pv5-tL-056"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="esy-x5-kzQ" secondAttribute="bottom" constant="476" id="uzI-2R-KO1"/>
+                            <constraint firstItem="vsT-Gt-Oi5" firstAttribute="top" secondItem="ut6-Fx-HpZ" secondAttribute="bottom" constant="8" symbolic="YES" id="ywA-zt-5tC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="esy-x5-kzQ" id="JJU-yw-zfH"/>
+                        <outlet property="slider" destination="ut6-Fx-HpZ" id="0C6-C9-txw"/>
+                        <outlet property="textField" destination="kep-Tm-LYx" id="mQK-y6-QeU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
